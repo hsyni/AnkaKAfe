@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31205.134
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WFAankaKafe.UI", "WFAankaKafe.UI\WFAankaKafe.UI.csproj", "{A909FEAC-E65F-415C-8B06-52D47E1E2F19}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AnkaKafe", "AnkaKafe\AnkaKafe.csproj", "{6211D3A2-A8D9-4732-9E40-D68F6CF84890}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A909FEAC-E65F-415C-8B06-52D47E1E2F19}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A909FEAC-E65F-415C-8B06-52D47E1E2F19}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A909FEAC-E65F-415C-8B06-52D47E1E2F19}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A909FEAC-E65F-415C-8B06-52D47E1E2F19}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6211D3A2-A8D9-4732-9E40-D68F6CF84890}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6211D3A2-A8D9-4732-9E40-D68F6CF84890}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6211D3A2-A8D9-4732-9E40-D68F6CF84890}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6211D3A2-A8D9-4732-9E40-D68F6CF84890}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {615283D8-CC8B-4ECF-9C6C-69778D222A97}
+	EndGlobalSection
+EndGlobal
