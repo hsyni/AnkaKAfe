@@ -15,15 +15,23 @@ namespace WFAankaKafe.UI
     {
         private readonly KafeVeri _db;
         private readonly Siparis _siparis;
-        public SiparisForm(KafeVeri kafeveri, Siparis siparis )
+        private readonly BindingList<SiparisDetay> _blSiparisDetaylar;
+        public SiparisForm(KafeVeri kafeveri, Siparis siparis)
         {
             _db = kafeveri;
             _siparis = siparis;
+            _blSiparisDetaylar = new BindingList<SiparisDetay>(siparis.SiparisDetaylar);
             InitializeComponent();
             MasaNoGuncelle();
             FiyatGuncelle();
             UrunleriGoster();
             DetaylariListele();
+            _blSiparisDetaylar.ListChanged += _blSiparisDetaylar_ListChanged;
+        }
+
+        private void _blSiparisDetaylar_ListChanged(object sender, ListChangedEventArgs e)
+        {
+            FiyatGuncelle();
         }
 
         private void UrunleriGoster()
@@ -48,19 +56,23 @@ namespace WFAankaKafe.UI
 
             SiparisDetay siparisDetay = new SiparisDetay()
             {
-                UrunAd =urun.UrunAd,
+                UrunAd = urun.UrunAd,
                 BirimFiyat = urun.BirimFiyat,
                 Adet = (int)nudAdet.Value
             };
-            _siparis.SiparisDetaylar.Add(siparisDetay);
-            DetaylariListele();
-            FiyatGuncelle();
+            _blSiparisDetaylar.Add(siparisDetay);
         }
 
         private void DetaylariListele()
         {
-            dgvSiparisDetaylar.DataSource = null;
-            dgvSiparisDetaylar.DataSource = _siparis.SiparisDetaylar;
+            dgvSiparisDetaylar.DataSource = _blSiparisDetaylar;
+        }
+
+        private void dgvSiparisDetaylar_UserDeletingRow(object sender, DataGridViewRowCancelEventArgs e)
+        {
+            DialogResult dr = MessageBox.Show("Seçili sipariş detayları silinecektir.Emin misin?","Silme Onayı",MessageBoxButtons.YesNo,MessageBoxIcon.Exclamation,MessageBoxDefaultButton.Button2);
+
+            e.Cancel = dr == DialogResult.No;
         }
     }
 }
