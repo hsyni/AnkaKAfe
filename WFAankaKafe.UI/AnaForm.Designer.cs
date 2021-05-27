@@ -29,10 +29,12 @@ namespace WFAankaKafe.UI
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.MenuStrip1 = new System.Windows.Forms.MenuStrip();
             this.tsmiUrunler = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiGecmisUrunler = new System.Windows.Forms.ToolStripMenuItem();
             this.lvwMasalar = new System.Windows.Forms.ListView();
+            this.masalarImageList = new System.Windows.Forms.ImageList(this.components);
             this.MenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -64,11 +66,19 @@ namespace WFAankaKafe.UI
             // 
             this.lvwMasalar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.lvwMasalar.HideSelection = false;
+            this.lvwMasalar.LargeImageList = this.masalarImageList;
             this.lvwMasalar.Location = new System.Drawing.Point(12, 36);
             this.lvwMasalar.Name = "lvwMasalar";
             this.lvwMasalar.Size = new System.Drawing.Size(586, 384);
             this.lvwMasalar.TabIndex = 1;
             this.lvwMasalar.UseCompatibleStateImageBehavior = false;
+            this.lvwMasalar.DoubleClick += new System.EventHandler(this.lvwMasalar_DoubleClick);
+            // 
+            // masalarImageList
+            // 
+            this.masalarImageList.ColorDepth = System.Windows.Forms.ColorDepth.Depth8Bit;
+            this.masalarImageList.ImageSize = new System.Drawing.Size(64, 64);
+            this.masalarImageList.TransparentColor = System.Drawing.Color.Transparent;
             // 
             // AnaForm
             // 
@@ -92,5 +102,6 @@ namespace WFAankaKafe.UI
         private System.Windows.Forms.ToolStripMenuItem tsmiUrunler;
         private System.Windows.Forms.MenuStrip MenuStrip1;
         private System.Windows.Forms.ToolStripMenuItem tsmiGecmisUrunler;
+        private System.Windows.Forms.ImageList masalarImageList;
     }
 }

@@ -74,16 +74,28 @@ namespace WFAankaKafe.UI
             this.btnEkle.TabIndex = 2;
             this.btnEkle.Text = "Ekle";
             this.btnEkle.UseVisualStyleBackColor = true;
+            this.btnEkle.Click += new System.EventHandler(this.btnEkle_Click);
             // 
             // nudAdet
             // 
             this.nudAdet.Location = new System.Drawing.Point(156, 50);
+            this.nudAdet.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             this.nudAdet.Name = "nudAdet";
             this.nudAdet.Size = new System.Drawing.Size(120, 23);
             this.nudAdet.TabIndex = 3;
+            this.nudAdet.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             // 
             // cboUrun
             // 
+            this.cboUrun.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboUrun.FormattingEnabled = true;
             this.cboUrun.Location = new System.Drawing.Point(12, 50);
             this.cboUrun.Name = "cboUrun";
@@ -93,6 +105,7 @@ namespace WFAankaKafe.UI
             // cboMasa
             // 
             this.cboMasa.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.cboMasa.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboMasa.FormattingEnabled = true;
             this.cboMasa.Location = new System.Drawing.Point(415, 38);
             this.cboMasa.Name = "cboMasa";
